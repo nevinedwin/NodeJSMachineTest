@@ -26,7 +26,7 @@ function signIn() {
 
 // Form Validations
 function validateForm(inp) {
-    if (Object.values(inp).includes[""]) {
+    if (Object.values(inp).includes("")) {
         return false;
     }
     return true;
