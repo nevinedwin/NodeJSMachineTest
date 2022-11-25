@@ -1,5 +1,5 @@
 step-1
-Take terminal &&
+Take terminal in root folder && 
 install packeges using the command
 ------------npm i----------
 
