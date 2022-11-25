@@ -1,6 +1,6 @@
 step-1
-Take terminal
-installing packeges using the command
+Take terminal &&
+install packeges using the command
 ------------npm i----------
 
 step-2
