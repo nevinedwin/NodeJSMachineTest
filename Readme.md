@@ -17,3 +17,6 @@ Go to browser and search
 --------http://localhost:8080------
 
 here we can see the frontend application
+
+
+Now you can register, login and got to dashboard for seeing all users
