@@ -4,13 +4,19 @@ function logout() {
     $("#main-container").load("./pages/login.html");
 }
 
-jQuery.ajaxSetup({ cache: true });
 $(document).ready(function () {
     $('#users-table').DataTable({
         ajax: 'http://localhost:3000/list',
         type: "GET",
         columns: [
-            { data: 'email' }
+            { data: 'email' },
+            {
+                data: 'createdAt', "render": function (data) {
+                    var date = new Date(data);
+                    var month = date.getMonth() + 1;
+                    return (month.toString().length > 1 ? month : "0" + month) + "/" + date.getDate() + "/" + date.getFullYear();
+                }
+            }
         ],
     });
 });
