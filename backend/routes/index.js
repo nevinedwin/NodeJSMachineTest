@@ -22,7 +22,7 @@ const router = async (req, res) => {
                 // ---------CHECK USER ALREADY EXISTS--------------//
                 userData = await userSchema.find({ email: JSON.parse(body).email })
                 if (userData.length !== 0) {
-                    res.writeHead(400, { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" });
+                    res.writeHead(403, { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" });
                     res.end("User Already exists")
                     return;
                 }

@@ -52,17 +52,24 @@ function signIn() {
         alert(isValid.message);
         return;
     }
-    $.ajax({
-        url: "http://localhost:3000/signup",
-        type: "POST",
-        data: JSON.stringify({
-            'email': email,
-            'password': password
-        }),
-        success: function (data) {
-            goToLogin();
-        }
-    });
+    try {
+        $.ajax({
+            url: "http://localhost:3000/signup",
+            type: "POST",
+            data: JSON.stringify({
+                'email': email,
+                'password': password
+            }),
+            success: function (data) {
+                goToLogin();
+            },
+            error: function (err) {
+                alert(err.responseText)
+            }
+        });
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 function goToLogin() {
